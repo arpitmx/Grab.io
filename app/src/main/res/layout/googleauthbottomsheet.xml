@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    >
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="5dp"
+        android:background="@drawable/curvedbggray"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/on_boarding_text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfitextrabold"
+        android:gravity="center_horizontal"
+        android:text="Jump right in! 🎢"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/on_boarding_text_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/outfitlight"
+
+        android:gravity="center_horizontal|top"
+        android:text="Opportunities won’t wait so what are you waiting for? Join or Continue to Grab.io now"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/on_boarding_text_title" />
+
+
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/oauthbtn"
+        style="@style/mybuttonstyle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/outfitmedium"
+        android:text="Continue with Google"
+        android:background="@drawable/curvedbgwhite"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:drawableStart="@drawable/gbtn"
+        android:paddingLeft="30dp"
+
+        />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/authProg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminate="true"
+        android:progressTint="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp"
+        android:visibility="gone"
+
+        />
+
+    <TextView
+        android:id="@+id/subtitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:fontFamily="@font/outfitregular"
+        android:gravity="center_horizontal|top"
+        android:text="by Continuing you Accept our Terms and Privacy Policies"
+        android:textColor="#5B9BFF"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/on_boarding_text_title" />
+
+
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/outfitregular"
+        android:gravity="center_horizontal|top"
+        android:text="*Your Grab.io ID will be created if it doesn’t exists already"
+        android:textColor="#B9B9B9"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/on_boarding_text_title" />
+
+
+    <TextView
+        android:id="@+id/ico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/outfitbold"
+        android:gravity="center_horizontal|top"
+        android:text="@string/app_name"
+        android:textColor="#B49F9F9F"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/on_boarding_text_title" />
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

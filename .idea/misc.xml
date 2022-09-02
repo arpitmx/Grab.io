@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/button.xml" value="0.1115" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/curvedbgblack.xml" value="0.1115" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/curvedbggray.xml" value="0.1" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/curvedbggraybg.xml" value="0.1" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/curvedbgwhite.xml" value="0.1" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/curvedbuttonwhite.xml" value="0.1115" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/gradbg.xml" value="0.1115" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/gradientBG.xml" value="0.194" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/on1.xml" value="0.1" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/on2.xml" value="0.1" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/on3.xml" value="0.1" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/ripple2.xml" value="0.1" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/ripple3.xml" value="0.1" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/activity_details.xml" value="0.11614583333333334" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/fragment_on_boarding.xml" value="0.176" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/googleauthbottomsheet.xml" value="0.264" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/googleauthbtn.xml" value="0.2046875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

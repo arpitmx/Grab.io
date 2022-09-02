@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="titleArray">
+        <item>Grab the Oppurtunity</item>
+        <item>Grab the Oppurtunity</item>
+        <item>Grab the Oppurtunity</item>
+    </array>
+
+    <array name="descArray">
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id potenti nisl tellus vestibulum dictum luctus</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id potenti nisl tellus vestibulum dictum luctus</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id potenti nisl tellus vestibulum dictum luctus</item>
+
+    </array>
+</resources>
