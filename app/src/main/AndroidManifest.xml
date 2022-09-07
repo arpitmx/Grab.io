@@ -16,7 +16,9 @@
         <activity
             android:name=".UI.MainActivity"
             android:exported="false"
-            android:label="@string/title_activity_main" />
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.Grabio.MainTheme"
+            />
         <activity
             android:name=".Onboarding.DetailsActivity"
             android:exported="false" />

@@ -1,26 +1,14 @@
 package com.ncs.grabio.Onboarding;
 
-import android.content.Intent
 import android.graphics.Color
-import android.icu.lang.UCharacter
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-import android.os.Handler
-import android.os.Looper
-import android.util.Log
+import android.os.Bundle
 import android.view.View
 import android.view.animation.AnimationUtils
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-
-import com.ncs.grabio.R;
-import com.ncs.grabio.databinding.ActivityMainBinding;
-import com.ncs.grabio.databinding.GoogleauthbottomsheetBinding
+import com.ncs.grabio.R
 import com.ncs.grabio.databinding.OnboardingHostBinding
-import kotlin.math.abs
 
 /**
  * Created by Alok Ranjan on 30-08-2022
