@@ -11,6 +11,7 @@
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/curvedbuttonwhite.xml" value="0.1115" />
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/gradbg.xml" value="0.1115" />
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/gradientBG.xml" value="0.194" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/itembg.xml" value="0.1285" />
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/on1.xml" value="0.1" />
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/on2.xml" value="0.1" />
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/on3.xml" value="0.1" />
@@ -18,9 +19,15 @@
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/ripple3.xml" value="0.1" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/activity_details.xml" value="0.11614583333333334" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/fragment_blogs.xml" value="0.13333333333333333" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/fragment_home.xml" value="0.14739583333333334" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/fragment_on_boarding.xml" value="0.176" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/fragment_opportunities.xml" value="0.13333333333333333" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/fragment_question_hub.xml" value="0.24427083333333333" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/googleauthbottomsheet.xml" value="0.264" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/googleauthbtn.xml" value="0.2046875" />
+        <entry key="..\:/GrabLocal/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25833333333333336" />
+        <entry key="..\:/GrabLocal/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.2" />
       </map>
     </option>
   </component>

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.View
 import android.view.animation.AnimationUtils
 import androidx.core.content.ContextCompat
@@ -18,6 +19,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.ncs.grabio.R;
 import com.ncs.grabio.databinding.ActivityMainBinding;
 import com.ncs.grabio.databinding.GoogleauthbottomsheetBinding
+import com.ncs.grabio.databinding.OnboardingHostBinding
+import kotlin.math.abs
 
 /**
  * Created by Alok Ranjan on 30-08-2022
@@ -43,81 +46,104 @@ class OnBoardingActivity : AppCompatActivity() {
             updateCircleMarker(binding, position)
         }
     }
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: OnboardingHostBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = OnboardingHostBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val numberOfScreens = resources.getStringArray(R.array.titleArray).size
         binding.onBoardingMainContainer.makeStatusBarTransparent()
         val onBoardingAdapter = OnBoardingAdapter(this, numberOfScreens)
-        binding.onBoardingViewPager.adapter = onBoardingAdapter
-        binding.onBoardingViewPager.registerOnPageChangeCallback(onBoardingPageChangeCallback)
-        binding.onBoardingViewPager.orientation = ViewPager2.ORIENTATION_VERTICAL
-        binding.onBoardingViewPager.offscreenPageLimit = 3
+
+
+        with(binding.onBoardingViewPager) {
+
+            adapter = onBoardingAdapter
+            registerOnPageChangeCallback(onBoardingPageChangeCallback)
+            orientation = ViewPager2.ORIENTATION_VERTICAL
+            clipToPadding = false
+            clipChildren = false
+            offscreenPageLimit = 3
+            setPageTransformer(ViewPager2PageTransformation())
+
+        }
 
     }
 
-    private fun updateCircleMarker(binding: ActivityMainBinding, position: Int) {
+    private fun updateCircleMarker(binding : OnboardingHostBinding, position: Int) {
 
-        binding.btnNext.startAnimation(AnimationUtils.loadAnimation(this,R.anim.blink))
+       // binding.btnNext.startAnimation(AnimationUtils.loadAnimation(this,R.anim.blink))
+        binding.btnNext.startAnimation(AnimationUtils.loadAnimation(baseContext,R.anim.blinkinf))
+
         when (position) {
+
             0 -> {
 
                 binding.b1.setColorFilter(ContextCompat.getColor(this,R.color.s1bg))
                 binding.b2.setColorFilter(R.color.DarkBgGray)
                 binding.b3.setColorFilter(Color.DKGRAY)
-                binding.btnNext.setText("Slide down")
-                binding.btnNext.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0,R.drawable.ic_baseline_keyboard_arrow_down_24,0)
-                binding.btnNext.setBackgroundResource(R.drawable.on1)
-                binding.btnNext.setOnClickListener {
-                    binding.onBoardingViewPager.setCurrentItem(1,true)
 
+                with(binding.btnNext){
+                    setText("Slide down")
+                    setBackgroundColor(ContextCompat.getColor( context, R.color.s1bg))
+                    setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0,R.drawable.ic_baseline_keyboard_arrow_down_24,0)
+                    setBackgroundResource(R.drawable.on1)
+                    setOnClickListener {
+                        binding.onBoardingViewPager.setCurrentItem(1,true)
+
+                    }
                 }
+
+
             }
             1 -> {
                 binding.b1.setColorFilter(Color.DKGRAY)
                 binding.b2.setColorFilter(ContextCompat.getColor(this, R.color.s2bg))
                 binding.b3.setColorFilter(R.color.DarkBgGray)
-                binding.btnNext.setText("Slide down")
-                binding.btnNext.setBackgroundColor(ContextCompat.getColor(this, R.color.s2bg))
-                binding.btnNext.setBackgroundResource(R.drawable.on2)
-                binding.btnNext.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0,R.drawable.ic_baseline_keyboard_arrow_down_24,0)
 
-
-                binding.btnNext.setOnClickListener {
-                    binding.onBoardingViewPager.setCurrentItem(2,true)
+                with(binding.btnNext){
+                    setText("Slide down")
+                    setBackgroundColor(ContextCompat.getColor(context, R.color.s2bg))
+                    setBackgroundResource(R.drawable.on2)
+                    setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0,R.drawable.ic_baseline_keyboard_arrow_down_24,0)
+                    setOnClickListener {
+                        binding.onBoardingViewPager.setCurrentItem(2,true)
+                    }
                 }
+
+
             }
             2 -> {
 
                 binding.b1.setColorFilter(Color.DKGRAY)
                 binding.b2.setColorFilter(Color.DKGRAY)
-                binding.b3.setColorFilter(ContextCompat.getColor(this, R.color.s3bg))
-                binding.btnNext.setText("Get Started")
-                binding.btnNext.setBackgroundColor(ContextCompat.getColor(this, R.color.s3bg))
-                binding.btnNext.setBackgroundResource(R.drawable.on3)
-                binding.btnNext.startAnimation(AnimationUtils.loadAnimation(this,R.anim.blinkinf))
-                binding.btnNext.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0,R.drawable.ic_baseline_offline_bolt_24,0)
+                binding.b3.setColorFilter(ContextCompat.getColor(baseContext, R.color.s3bg))
 
-                binding.btnNext.setOnClickListener{
-                    binding.btnNext.animation.cancel()
-                    showGBottomsheet()
+                with(binding.btnNext){
+                    setText("Get Started")
+                    setBackgroundColor(ContextCompat.getColor(context, R.color.s3bg))
+                    setBackgroundResource(R.drawable.on3)
+                    setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0,R.drawable.ic_baseline_offline_bolt_24,0)
+
+                    setOnClickListener{
+                        binding.btnNext.animation.cancel()
+                        showGBottomsheet()
+                    }
+
+
                 }
+
 
             }
         }
     }
 
-    fun showGBottomsheet(){
+    fun showGBottomsheet() {
 
         val modalBottomSheet = ModalGbottomsheet()
         modalBottomSheet.show(supportFragmentManager, ModalGbottomsheet.TAG)
-
-
-
     }
 
     override fun onDestroy() {
@@ -135,4 +161,28 @@ class OnBoardingActivity : AppCompatActivity() {
 
     }
 
+}
+
+class ViewPager2PageTransformation : ViewPager2.PageTransformer {
+    override fun transformPage(page: View, position: Float) {
+//        val absPos = Math.abs(position)
+//        page.apply {
+//
+//            translationY = absPos * 500f
+//            translationX = absPos * 500f
+//
+//            Log.d("TAG", "transformPage: "+ absPos)
+//
+//            scaleX = 1f
+//            scaleY = 1f
+//        }
+        when {
+            position < -1 ->
+                page.alpha = 0.1f
+            position <= 1 -> {
+                page.alpha = Math.max(0.2f, 1 - Math.abs(position))
+            }
+            else -> page.alpha = 0.1f
+        }
+    }
 }
