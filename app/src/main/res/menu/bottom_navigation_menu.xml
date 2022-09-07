@@ -29,6 +29,7 @@
         android:icon="@drawable/ic_baseline_menu_book_24"
         android:title="@string/bottom_nav_item_blogs"
         android:enabled="true"
+
         />
 
 

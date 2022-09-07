@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/home_item">
 
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/home_item"
         android:name="com.ncs.grabio.UI.Home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
     </fragment>
 
     <fragment
-        android:id="@+id/opportunitiesFragment"
+        android:id="@+id/opportunities_item"
         android:name="com.ncs.grabio.UI.Grabhub.GrabhubFragment"
         android:label="fragment_opportunities"
         tools:layout="@layout/fragment_opportunities" >
@@ -22,7 +22,7 @@
 
 
     <fragment
-        android:id="@+id/questionHubFragment"
+        android:id="@+id/questionhub_item"
         android:name="com.ncs.grabio.UI.AskHub.AskHubFragment"
         android:label="fragment_question_hub"
         tools:layout="@layout/fragment_question_hub" >
@@ -31,7 +31,7 @@
 
 
     <fragment
-        android:id="@+id/blogsFragment"
+        android:id="@+id/bloghub_item"
         android:name="com.ncs.grabio.UI.Blogs.BlogsFragment"
         android:label="fragment_blogs"
         tools:layout="@layout/fragment_blogs">
