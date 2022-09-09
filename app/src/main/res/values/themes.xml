@@ -28,7 +28,7 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >@color/main_bg_blue</item>
-        <item name="android:navigationBarColor" >@color/main_bg_blue</item>
+        <item name="android:navigationBarColor" >@color/darkbg_main</item>
         <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
 
 
