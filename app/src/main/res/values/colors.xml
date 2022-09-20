@@ -16,6 +16,8 @@
     <color name="DarkBgGray">#333333</color>
     <color name="darkbg_main">#131313</color>
     <color name="main_bg_blue">#131E24</color>
+    <color name="grabblue">#25FFCB</color>
+    <color name="item_bg_glow">#1D2930</color>
 
 
 

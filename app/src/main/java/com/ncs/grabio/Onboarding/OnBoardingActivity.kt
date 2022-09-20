@@ -56,6 +56,7 @@ class OnBoardingActivity : AppCompatActivity() {
             offscreenPageLimit = 3
             setPageTransformer(ViewPager2PageTransformation())
 
+
         }
 
     }
