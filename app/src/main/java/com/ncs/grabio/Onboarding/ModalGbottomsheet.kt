@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.ncs.grabio.UI.MainActivity
+import com.ncs.grabio.UI.MainHostActivity
 import com.ncs.grabio.R
 import com.ncs.grabio.databinding.GoogleauthbottomsheetBinding
 
@@ -50,7 +50,7 @@ class ModalGbottomsheet : BottomSheetDialogFragment() {
         this.isCancelable= false
         Handler(Looper.getMainLooper()).postDelayed({
 
-            startActivity(Intent(activity, MainActivity::class.java))
+            startActivity(Intent(activity, MainHostActivity::class.java))
             requireActivity().finish()
         },500)
     }
