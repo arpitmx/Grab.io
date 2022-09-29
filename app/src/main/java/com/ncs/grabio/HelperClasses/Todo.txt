@@ -11,3 +11,14 @@ Build optimization changes (Remove this before production level build, only for 
 2. Remove org.gradle.caching=true from gradle.properties
 3. Remove org.gradle.parallel=true from gradle.properties
 4. Remove -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError
+
+
+2. Todo list
+
+1. Make home page
+ -1. Search bar
+ -2. Carousel (Slider)
+ -3. Gridview opportunities on Grab
+ -4. Watchlist
+ -5. Recenty viewed
+ -5. Trending sections

@@ -18,7 +18,10 @@
     <color name="main_bg_blue">#131E24</color>
     <color name="grabblue">#25FFCB</color>
     <color name="item_bg_glow">#1D2930</color>
-
+    <color name="item_bg_color_dark">#0F1A20</color>
+    <color name="text_dark">#304048</color>
+    <color name="action_bar_bg">#131E24</color>
+    <color name="better_white">#E3E1E1</color>
 
 
 </resources>

@@ -6,6 +6,7 @@
         android:icon="@drawable/ic_baseline_home_24"
         android:title="@string/bottom_nav_item_home"
         android:enabled="true"
+        
 
         />
 

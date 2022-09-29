@@ -3,66 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/main_bg_blue"
     android:orientation="vertical"
     tools:context=".UI.Home.HomeFragment">
 
-
-
-    <androidx.appcompat.widget.LinearLayoutCompat
+        <include
+        android:id="@+id/gio_actionbar"
+        layout="@layout/grab_actionbar"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        android:background="@color/item_bg_glow"
-        >
+        />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center_vertical"
-            android:layout_weight="8">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Welcome Back!"
-                android:layout_marginStart="15dp"
-                android:fontFamily="@font/outfitsemibold"
-                android:textColor="@color/grabblue"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Aditi Pandey"
-                android:fontFamily="@font/outfitmedium"
-                android:textSize="16dp"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/white"
-                android:layout_marginStart="15dp"
-
-                />
-
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-        <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/gbtn"
-            android:layout_gravity="center_vertical"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/imgbgcircular"
-
-            />
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 
 
-
-</androidx.appcompat.widget.LinearLayoutCompat>

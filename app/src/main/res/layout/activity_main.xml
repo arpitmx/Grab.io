@@ -16,21 +16,24 @@
         android:elevation="8dp"
         app:itemIconTint="@drawable/itembg"
         app:itemTextColor="@drawable/itembg"
+        app:itemIconSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_navigation_menu" />
 
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
-        android:id="@+id/linearProgressIndicator"
+    <include
+        android:id="@+id/progress_include"
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:indeterminate="true"
+        android:layout_height="wrap_content"
+        layout="@layout/grablinearprogressbar"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:trackColor="@color/grabblue" />
+        />
+
+
 
 
     <fragment
@@ -43,7 +46,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearProgressIndicator"
+        app:layout_constraintTop_toBottomOf="@+id/progress_include"
         app:navGraph="@navigation/nav_graph" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
