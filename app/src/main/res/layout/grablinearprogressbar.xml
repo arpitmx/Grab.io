@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bottomnavsheet"
-        android:textColor="#F024F6C4"
+        android:textColor="#F0D8D8D8"
         android:text="Welcome back Alok , your content is loaded!"
         android:gravity="center"
         android:padding="15dp"

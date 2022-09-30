@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.148" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/action_grad.xml" value="0.148" />
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/bottomnavsheet.xml" value="0.148" />
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/button.xml" value="0.1115" />
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/curvedbgblack.xml" value="0.1115" />
@@ -12,6 +14,7 @@
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/curvedbuttonwhite.xml" value="0.1115" />
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/gradbg.xml" value="0.1115" />
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/gradientBG.xml" value="0.194" />
+        <entry key="..\:/GrabLocal/app/src/main/res/drawable/ic_home_ico.xml" value="0.148" />
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/imgbg.xml" value="0.144" />
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/item_bg_curve.xml" value="0.148" />
         <entry key="..\:/GrabLocal/app/src/main/res/drawable/itembg.xml" value="0.1285" />
@@ -33,6 +36,8 @@
         <entry key="..\:/GrabLocal/app/src/main/res/layout/grab_actionbar.xml" value="0.264" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/grablinearprogressbar.xml" value="0.264" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/onboarding_host.xml" value="0.25833333333333336" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/opportunities_grid_item.xml" value="0.264" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/opportunities_grid_item_element.xml" value="0.4" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/poster_item.xml" value="0.16799999999999998" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/searchbar.xml" value="0.25833333333333336" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/searchbar_item.xml" value="0.264" />

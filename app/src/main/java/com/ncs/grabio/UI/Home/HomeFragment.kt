@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.GridView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ncs.grabio.R
 import com.ncs.grabio.UI.DataHolder
 import com.ncs.grabio.UI.Home.Adapter.DHolder
+import com.ncs.grabio.UI.Home.Adapter.GridAdapter
 import com.ncs.grabio.UI.Home.Adapter.RecyclerViewAdapter
 import com.ncs.grabio.UI.Profile.ProfileActivity
 import com.ncs.grabio.databinding.FragmentHomeBinding
@@ -85,24 +87,28 @@ class HomeFragment : Fragment(), View.OnClickListener {
        }
     }
 
+
     fun setRecyclerview(){
 
         val dataList = ArrayList<DHolder.Data>()
-        dataList.add(DHolder.Data(RecyclerViewAdapter.VIEW_TYPE_ONE, "1. Hi! I am in View 1"))
-        dataList.add(DHolder.Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "2. Hi! I am in View 2"))
-        dataList.add(DHolder.Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "2. Hi! I am in View 2"))
-        dataList.add(DHolder.Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "2. Hi! I am in View 2"))
-        dataList.add(DHolder.Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "2. Hi! I am in View 2"))
-        dataList.add(DHolder.Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "2. Hi! I am in View 2"))
-        dataList.add(DHolder.Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "2. Hi! I am in View 2"))
+        dataList.add(DHolder.Data(RecyclerViewAdapter.VIEW_TYPE_THREE, "2. Hi! I am in View 2"))
+        dataList.add(DHolder.Data(RecyclerViewAdapter.VIEW_TYPE_ONE, "2. Hi! I am in View 2"))
+        dataList.add(DHolder.Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "1. Hi! I am in View 1"))
+        dataList.add(DHolder.Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "1. Hi! I am in View 1"))
+        dataList.add(DHolder.Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "1. Hi! I am in View 1"))
 
 
 
-
-        val adapter = RecyclerViewAdapter(requireContext(), dataList)
+        val adptr = RecyclerViewAdapter(requireContext(), dataList)
         recyclerView = binding.recyclerView
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.adapter = adapter
+        recyclerView.apply {
+            layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+            adapter = adptr
+            edgeEffectFactory = BounceEdgeEffectFactory()
+        }
+
+
+
 
     }
 

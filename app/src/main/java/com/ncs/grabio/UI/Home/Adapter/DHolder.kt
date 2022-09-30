@@ -9,4 +9,5 @@ package com.ncs.grabio.UI.Home.Adapter
  **/
 class DHolder {
     data class Data(val viewType: Int, val textData: String)
+    data class DataGrid(val oppType: String, val imgid: Int)
 }

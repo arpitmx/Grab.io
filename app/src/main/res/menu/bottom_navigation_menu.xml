@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/home_item"
-        android:icon="@drawable/ic_baseline_home_24"
+        android:icon="@drawable/ic_home_ico"
         android:title="@string/bottom_nav_item_home"
         android:enabled="true"
         
@@ -12,14 +12,14 @@
 
     <item
         android:id="@+id/opportunities_item"
-        android:icon="@drawable/ic_baseline_toys_24"
+        android:icon="@drawable/ic_grab_ico"
         android:title="@string/bottom_nav_item_grab"
         android:enabled="true"
         />
 
     <item
         android:id="@+id/questionhub_item"
-        android:icon="@drawable/ic_baseline_question_answer_24"
+        android:icon="@drawable/ic_queries_ico"
         android:title="@string/bottom_nav_item_questionHub"
         android:enabled="true"
         />
@@ -27,7 +27,7 @@
 
     <item
         android:id="@+id/bloghub_item"
-        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:icon="@drawable/ic_blog_ico"
         android:title="@string/bottom_nav_item_blogs"
         android:enabled="true"
 

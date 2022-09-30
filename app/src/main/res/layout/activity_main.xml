@@ -10,9 +10,10 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/item_bg_glow"
+        android:minHeight="60dp"
+        android:background="@color/DarkBgGray"
         android:elevation="8dp"
         app:itemIconTint="@drawable/itembg"
         app:itemTextColor="@drawable/itembg"

@@ -12,13 +12,40 @@
         layout="@layout/grab_actionbar"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
+
         />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:nestedScrollingEnabled="false"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"
+            />
+
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+<!--       <LinearLayout-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:layout_height="match_parent"-->
+<!--           android:orientation="vertical"-->
+<!--           >-->
+<!--        <include-->
+<!--            layout="@layout/searchbar_item"-->
+<!--            />-->
+<!--        <include-->
+<!--            layout="@layout/poster_item"-->
+<!--            />-->
+<!--        <include-->
+<!--            layout="@layout/opportunities_grid_item"-->
+<!--            />-->
+<!--       </LinearLayout>-->
+
+<!--        </ScrollView>-->
+</androidx.appcompat.widget.LinearLayoutCompat>
 
 
 

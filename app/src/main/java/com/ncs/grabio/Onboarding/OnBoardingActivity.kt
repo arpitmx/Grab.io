@@ -160,7 +160,7 @@ class ViewPager2PageTransformation : ViewPager2.PageTransformer {
 //            translationY = absPos * 500f
 //            translationX = absPos * 500f
 //
-//            Log.d("TAG", "transformPage: "+ absPos)
+//            Log.d("TAG", "tranbbbsformPage: "+ absPos)
 //
 //            scaleX = 1f
 //            scaleY = 1f

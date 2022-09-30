@@ -13,15 +13,18 @@
     <color name="s1bg">#A7FFA5</color>
     <color name="s2bg">#F19FFF</color>
     <color name="s3bg">#FFE871</color>
-    <color name="DarkBgGray">#333333</color>
+    <color name="DarkBgGray">#2B2B2B</color>
     <color name="darkbg_main">#131313</color>
-    <color name="main_bg_blue">#131E24</color>
-    <color name="grabblue">#25FFCB</color>
+    <color name="main_bg_blue">#202020</color>
+    <color name="grabblue">#41FFAF</color>
     <color name="item_bg_glow">#1D2930</color>
     <color name="item_bg_color_dark">#0F1A20</color>
     <color name="text_dark">#304048</color>
     <color name="action_bar_bg">#131E24</color>
     <color name="better_white">#E3E1E1</color>
+    <color name="status_bar">#D2191919</color>
+    <color name="item_bg_dark">#2E3031</color>
+    <color name="card_bg">#3F4041</color>
 
 
 </resources>

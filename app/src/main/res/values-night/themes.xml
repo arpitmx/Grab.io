@@ -9,7 +9,7 @@
         <item name="colorSecondaryVariant">@color/darkTheme_bg</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" >@color/action_bar_bg</item>
+        <item name="android:statusBarColor" >@color/main_bg_blue</item>
         <item name="android:navigationBarColor" >@color/DarkBgGray</item>
         <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
 
@@ -27,8 +27,8 @@
         <item name="colorSecondaryVariant">@color/darkTheme_bg</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" >@color/action_bar_bg</item>
-        <item name="android:navigationBarColor" >@color/item_bg_glow</item>
+        <item name="android:statusBarColor" >@color/status_bar</item>
+        <item name="android:navigationBarColor" >@color/DarkBgGray</item>
         <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
 
 
