@@ -18,6 +18,7 @@
         android:drawableStart="@drawable/ic_searchico"
         android:paddingStart="30dp"
         android:paddingEnd="90dp"
+
         android:text="Search for Opportunities"
         android:textAllCaps="false"
         android:fontFamily="@font/outfitregular"

@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ncs.grabio.HelperClasses.BounceEdgeEffectFactory
 import com.ncs.grabio.R
 import com.ncs.grabio.UI.DataHolder
 import com.ncs.grabio.UI.Home.Adapter.DHolder
@@ -65,9 +66,9 @@ class HomeFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        Handler(Looper.getMainLooper()).postDelayed({
-            eventbus.post(DataHolder.progData(1,"Just wait and watch \uD83D\uDC40",2000))
-        }, 500)
+//        Handler(Looper.getMainLooper()).postDelayed({
+//            eventbus.post(DataHolder.progData(1,"Just wait and watch \uD83D\uDC40",2000))
+//        }, 500)
 
         binding.gioActionbar.profileBtn.setOnClickListener(this)
 
@@ -84,6 +85,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
        when(p0) {
            binding.gioActionbar.profileBtn ->
                startActivity(Intent(activity,ProfileActivity::class.java))
+
        }
     }
 

@@ -3,10 +3,13 @@ package com.ncs.grabio.UI
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.fragment.app.FragmentActivity
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -19,14 +22,17 @@ import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 
 
+
 class MainHostActivity : FragmentActivity(), HomeFragment.ProgressCallback {
 
     private  var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
     lateinit var animFadeIn: Animation
     lateinit var animFadeOut: Animation
-    private lateinit var pview : GrablinearprogressbarBinding
-
+    private lateinit var progressView : GrablinearprogressbarBinding
+    lateinit var bottmNav: BottomNavigationView
+    lateinit var navController : NavController
+    var selectedItem = -1
 
     override fun onStart() {
         super.onStart()
@@ -48,27 +54,103 @@ class MainHostActivity : FragmentActivity(), HomeFragment.ProgressCallback {
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        pview = binding.progressInclude
-
-
-        val navView: BottomNavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        navView.setupWithNavController(navController)
-
-
+        //inits
         animFadeIn = AnimationUtils.loadAnimation(this, androidx.appcompat.R.anim.abc_slide_in_bottom)
         animFadeOut = AnimationUtils.loadAnimation(this, androidx.appcompat.R.anim.abc_slide_out_bottom)
+        progressView = binding.progressInclude
+
+        //bottom bar
+        setBottomNavBar()
+
+
+
+
+    }
+
+    fun setBottomNavBar() {
+
+         bottmNav = binding.bottomNav
+         navController = findNavController(R.id.nav_host_fragment_activity_main)
+        bottmNav.setupWithNavController(navController)
+
+        bottmNav.setOnItemSelectedListener{ item ->
+            selectFragment(item)
+            return@setOnItemSelectedListener true
+        }
+
+    }
+
+    fun selectFragment(item:MenuItem){
+
+        if (selectedItem == -1)
+            navController.navigate(item.itemId)
+        else
+            navController.navigate(
+                when (item.itemId) {
+                    R.id.home_item ->
+                        if (selectedItem == R.id.opportunities_item)
+                            R.id.action_opportunities_item_to_home_item2
+                        else if (selectedItem == R.id.questionhub_item)
+                            R.id.action_questionhub_item_to_home_item
+                        else if (selectedItem == R.id.bloghub_item)
+                            item.itemId
+                        else R.id.action_bloghub_item_to_home_item
+
+                    R.id.opportunities_item ->
+                        if (selectedItem == R.id.home_item)
+                            R.id.action_home_item_to_opportunities_item2
+                        else if (selectedItem == R.id.questionhub_item)
+                            R.id.action_questionhub_item_to_opportunities_item
+                        else if (selectedItem == R.id.opportunities_item)
+                            item.itemId
+                        else R.id.action_bloghub_item_to_opportunities_item
+
+
+                    R.id.questionhub_item ->
+                        if (selectedItem == R.id.home_item)
+                            R.id.action_home_item_to_questionhub_item
+                        else if (selectedItem == R.id.opportunities_item)
+                            R.id.action_opportunities_item_to_questionhub_item
+                        else if (selectedItem == R.id.questionhub_item)
+                            item.itemId
+                        else R.id.action_bloghub_item_to_questionhub_item
+
+
+                    R.id.bloghub_item ->
+                        if (selectedItem == R.id.home_item)
+                            R.id.action_home_item_to_bloghub_item
+                        else if (selectedItem == R.id.opportunities_item)
+                            R.id.action_opportunities_item_to_bloghub_item
+                        else if (selectedItem == R.id.bloghub_item)
+                            item.itemId
+                        else R.id.action_questionhub_item_to_bloghub_item
+
+
+
+                    else -> item.itemId
+                })
+
+        selectedItem = item.itemId
+
+
+            // uncheck the other items.
+            for (i in 0 until bottmNav.menu.size()) {
+                val menuItem = bottmNav.menu.getItem(i)
+                if (menuItem.itemId == item.itemId) menuItem.isChecked = true
+            }
+
+
 
     }
 
 
     override fun progressVisible(show: Int) {
         if(show==1){
-            pview.linearProgressIndicator.visibility = View.VISIBLE
-            pview.linearProgressIndicator.startAnimation(animFadeIn)
+            progressView.linearProgressIndicator.visibility = View.VISIBLE
+            progressView.linearProgressIndicator.startAnimation(animFadeIn)
 
         }else {
-            pview.linearProgressIndicator.startAnimation(animFadeOut)
+            progressView.linearProgressIndicator.startAnimation(animFadeOut)
             binding.progressInclude.linearProgressIndicator.visibility = View.GONE
             }
 
@@ -77,18 +159,18 @@ class MainHostActivity : FragmentActivity(), HomeFragment.ProgressCallback {
 
     override fun progressShowToast(text: String, time: Long) {
 
-        with(pview.toast){
+        with(progressView.toast){
             setText(text)
             visibility = View.VISIBLE
             startAnimation(animFadeIn)
         }
 
         Handler(Looper.getMainLooper()).postDelayed({
-            pview.toast.startAnimation(animFadeOut)
+            progressView.toast.startAnimation(animFadeOut)
         },time)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            with(pview.toast){
+            with(progressView.toast){
                 visibility = View.GONE
             }
         },time+400)
@@ -104,7 +186,7 @@ class MainHostActivity : FragmentActivity(), HomeFragment.ProgressCallback {
             progressVisible(1)
             Handler(Looper.getMainLooper()).postDelayed({
                 progressVisible(0)
-                progressShowToast(progData.text,progData.time)
+             //   progressShowToast(progData.text,progData.time)
             },2000)
         }
     }

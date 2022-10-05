@@ -10,6 +10,26 @@
         android:name="com.ncs.grabio.UI.Home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_item_to_opportunities_item2"
+            app:destination="@id/opportunities_item"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+
+            />
+        <action
+            android:id="@+id/action_home_item_to_questionhub_item"
+            app:destination="@id/questionhub_item"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+
+            />
+        <action
+            android:id="@+id/action_home_item_to_bloghub_item"
+            app:destination="@id/bloghub_item"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            />
     </fragment>
 
     <fragment
@@ -17,7 +37,24 @@
         android:name="com.ncs.grabio.UI.Grabhub.GrabhubFragment"
         android:label="fragment_opportunities"
         tools:layout="@layout/fragment_opportunities" >
+        <action
+            android:id="@+id/action_opportunities_item_to_home_item2"
+            app:destination="@id/home_item"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_opportunities_item_to_questionhub_item"
+            app:destination="@id/questionhub_item"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
 
+            />
+        <action
+            android:id="@+id/action_opportunities_item_to_bloghub_item"
+            app:destination="@id/bloghub_item"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            />
     </fragment>
 
 
@@ -26,6 +63,26 @@
         android:name="com.ncs.grabio.UI.AskHub.AskHubFragment"
         android:label="fragment_question_hub"
         tools:layout="@layout/fragment_question_hub" >
+        <action
+            android:id="@+id/action_questionhub_item_to_home_item"
+            app:destination="@id/home_item"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+
+            />
+        <action
+            android:id="@+id/action_questionhub_item_to_opportunities_item"
+            app:destination="@id/opportunities_item"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_questionhub_item_to_bloghub_item"
+            app:destination="@id/bloghub_item"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            />
+
 
     </fragment>
 
@@ -35,6 +92,24 @@
         android:name="com.ncs.grabio.UI.Blogs.BlogsFragment"
         android:label="fragment_blogs"
         tools:layout="@layout/fragment_blogs">
+        <action
+            android:id="@+id/action_bloghub_item_to_home_item"
+            app:destination="@id/home_item"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_bloghub_item_to_opportunities_item"
+            app:destination="@id/opportunities_item"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_bloghub_item_to_questionhub_item"
+            app:destination="@id/questionhub_item"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            />
     </fragment>
 
 
