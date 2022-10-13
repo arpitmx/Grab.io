@@ -70,6 +70,9 @@ dependencies {
     kapt 'com.google.dagger:dagger-android-processor:2.20'
     kapt 'com.google.dagger:dagger-compiler:2.20'
 
+    //Circle image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
 
 
     //EventBus

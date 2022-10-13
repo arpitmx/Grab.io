@@ -1,19 +1,26 @@
 package com.ncs.grabio.UI
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import androidx.core.app.ActivityOptionsCompat
+import androidx.core.view.ViewCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.navigation.NavController
+import androidx.navigation.NavDirections
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.ncs.grabio.R
+import com.ncs.grabio.SearchPage.SearchActivity
+import com.ncs.grabio.UI.Home.Adapter.RecyclerViewAdapter
 import com.ncs.grabio.UI.Home.HomeFragment
 import com.ncs.grabio.databinding.ActivityMainBinding
 import com.ncs.grabio.databinding.GrablinearprogressbarBinding
@@ -23,7 +30,7 @@ import org.greenrobot.eventbus.ThreadMode
 
 
 
-class MainHostActivity : FragmentActivity(), HomeFragment.ProgressCallback {
+class MainHostActivity : FragmentActivity(), HomeFragment.ProgressCallback{
 
     private  var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
@@ -58,7 +65,6 @@ class MainHostActivity : FragmentActivity(), HomeFragment.ProgressCallback {
         animFadeIn = AnimationUtils.loadAnimation(this, androidx.appcompat.R.anim.abc_slide_in_bottom)
         animFadeOut = AnimationUtils.loadAnimation(this, androidx.appcompat.R.anim.abc_slide_out_bottom)
         progressView = binding.progressInclude
-
         //bottom bar
         setBottomNavBar()
 
@@ -73,12 +79,23 @@ class MainHostActivity : FragmentActivity(), HomeFragment.ProgressCallback {
          navController = findNavController(R.id.nav_host_fragment_activity_main)
         bottmNav.setupWithNavController(navController)
 
-        bottmNav.setOnItemSelectedListener{ item ->
-            selectFragment(item)
-            return@setOnItemSelectedListener true
-        }
+
+//        bottmNav.setOnItemSelectedListener{ item ->
+//            selectFragment(item)
+//            return@setOnItemSelectedListener false
+//        }
 
     }
+
+    public fun actionSearchFrag(item : View){
+        val intent = Intent(this, SearchActivity::class.java)
+        val options : ActivityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this,item,
+            ViewCompat.getTransitionName(item).toString()
+        )
+        startActivity(intent,options.toBundle())
+    }
+
+
 
     fun selectFragment(item:MenuItem){
 
@@ -92,7 +109,7 @@ class MainHostActivity : FragmentActivity(), HomeFragment.ProgressCallback {
                             R.id.action_opportunities_item_to_home_item2
                         else if (selectedItem == R.id.questionhub_item)
                             R.id.action_questionhub_item_to_home_item
-                        else if (selectedItem == R.id.bloghub_item)
+                        else if (selectedItem == R.id.home_item)
                             item.itemId
                         else R.id.action_bloghub_item_to_home_item
 
@@ -125,12 +142,11 @@ class MainHostActivity : FragmentActivity(), HomeFragment.ProgressCallback {
                             item.itemId
                         else R.id.action_questionhub_item_to_bloghub_item
 
-
-
                     else -> item.itemId
                 })
 
         selectedItem = item.itemId
+        navController.saveState()
 
 
             // uncheck the other items.
@@ -141,6 +157,14 @@ class MainHostActivity : FragmentActivity(), HomeFragment.ProgressCallback {
 
 
 
+    }
+
+    fun NavController.safeNavigate(direction: NavDirections) {
+        Log.d("clickTag", "Click happened")
+        currentDestination?.getAction(direction.actionId)?.run {
+            Log.d("clickTag", "Click Propagated")
+            navigate(direction)
+        }
     }
 
 
@@ -190,6 +214,7 @@ class MainHostActivity : FragmentActivity(), HomeFragment.ProgressCallback {
             },2000)
         }
     }
+
 
 
 }

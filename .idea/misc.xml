@@ -28,15 +28,19 @@
         <entry key="..\:/GrabLocal/app/src/main/res/layout/activity_details.xml" value="0.11614583333333334" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/activity_profile.xml" value="0.2078125" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/activity_search.xml" value="0.24427083333333333" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/fragment_blogs.xml" value="0.13333333333333333" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/fragment_on_boarding.xml" value="0.176" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/fragment_opportunities.xml" value="0.13333333333333333" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/fragment_question_hub.xml" value="0.24427083333333333" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/fragment_search.xml" value="0.21975806451612903" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/googleauthbottomsheet.xml" value="0.264" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/googleauthbtn.xml" value="0.2046875" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/grab_actionbar.xml" value="0.264" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/grablinearprogressbar.xml" value="0.264" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/observe_list_item.xml" value="0.264" />
+        <entry key="..\:/GrabLocal/app/src/main/res/layout/observe_list_parent_item.xml" value="0.264" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/onboarding_host.xml" value="0.25833333333333336" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/opportunities_grid_item.xml" value="0.264" />
         <entry key="..\:/GrabLocal/app/src/main/res/layout/opportunities_grid_item_element.xml" value="0.264" />

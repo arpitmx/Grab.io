@@ -25,6 +25,7 @@
     <color name="status_bar">#D2191919</color>
     <color name="item_bg_dark">#2E3031</color>
     <color name="card_bg">#3F4041</color>
+    <color name="starts_in">#DCFFF7</color>
 
 
 </resources>

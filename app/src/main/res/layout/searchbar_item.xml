@@ -8,6 +8,7 @@
     >
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/search_bar_item"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginBottom="10dp"
@@ -18,8 +19,9 @@
         android:drawableStart="@drawable/ic_searchico"
         android:paddingStart="30dp"
         android:paddingEnd="90dp"
-
-        android:text="Search for Opportunities"
+        android:transitionName="searchActivityTransition"
+        android:hint="Search for Opportunities"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:fontFamily="@font/outfitregular"
         android:textSize="18dp"
@@ -31,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent"
 
 
-        />
+        android:inputType="textAutoCorrect" />
 
 <!--    <RelativeLayout-->
 <!--        android:layout_width="match_parent"-->

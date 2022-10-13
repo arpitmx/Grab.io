@@ -18,7 +18,7 @@
         android:padding="5dp"
         android:textAllCaps="false"
         android:textColor="@color/grabblue"
-        app:layout_constraintBottom_toTopOf="@+id/gridproductlayout"
+        app:layout_constraintBottom_toTopOf="@+id/observe_list"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,32 +27,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:padding="5dp"
         android:fontFamily="@font/outfitregular"
         android:gravity="center"
-        android:text="Opportunities on Grab"
+        android:padding="5dp"
+        android:text="Observe List"
         android:textColor="#F3F3F3"
         android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/gridproductlayout"
+        app:layout_constraintBottom_toTopOf="@+id/observe_list"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <GridView
-        android:id="@+id/gridproductlayout"
+    <ListView
+        android:id="@+id/observe_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="240dp"
-        android:layout_marginTop="40dp"
-        android:numColumns="3"
-        android:padding="1dp"
         android:gravity="center"
-        android:verticalSpacing="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    </GridView>
+    </ListView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

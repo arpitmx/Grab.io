@@ -30,6 +30,7 @@
             app:enterAnim="@anim/from_right"
             app:exitAnim="@anim/to_left"
             />
+
     </fragment>
 
     <fragment

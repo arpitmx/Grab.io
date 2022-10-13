@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SearchPage.SearchActivity">
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/item_bg_curve"
+        android:drawableStart="@drawable/ic_searchico"
+        android:paddingStart="30dp"
+        android:paddingEnd="90dp"
+        android:hint="     Search for Opportunities"
+        android:textAllCaps="false"
+        android:fontFamily="@font/outfitregular"
+        android:transitionName="searchActivityTransition"
+        android:textSize="18dp"
+        android:textColor="#DEE3E3E3"
+        android:drawableTint="#DEE3E3E3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        android:inputType="textAutoCorrect" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
